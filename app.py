@@ -6,8 +6,8 @@ from e2b_code_interpreter import CodeInterpreter
 import os
 import base64
 
-
-image_file = 'static/wallpaper2.jpg'
+st.set_page_config(page_title="CodeGenie", page_icon="💻")
+image_file = 'static/wallpaper1.jpg'
 
 with open(image_file, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())

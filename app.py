@@ -43,7 +43,6 @@ def execute_code(code):
             st.error(f"Error: {str(e)}")
             return str(e)
 
-st.set_page_config(page_title="CodeGenie", page_icon="💻")
 st.title("CodeGenie")
 st.caption("Your AI Coding Assistant Chatbot Powered by E2B Code Interpreter SDK")
 

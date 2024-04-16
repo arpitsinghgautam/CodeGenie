@@ -4,6 +4,25 @@ import time
 import random
 from e2b_code_interpreter import CodeInterpreter
 import os
+import base64
+
+
+image_file = 'static/wallpaper2.jpg'
+
+with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
 
 # Function to clean Gemini output
 def clean_gemini_output(generated_code):
